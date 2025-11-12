@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="language" content="English">
+  	
+	<!-- <title>HR</title> -->
+	<title>HR.tail - Powerful Platform To Organize Your Workforce</title>
+
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+<body>
+	<div id="content">
+		<div class="w-full h-full bg-[#0D0C0E] bg-center bg-no-repeat bg-cover bg-[url('img/mainbg2.png')] lg:bg-[url('img/mainbg1.png')]">
+			<div class="z-40 font-montserrat flex flex-col">
+				<header id="nav" class="fixed inset-x-0 top-0  z-40">
+					<nav class="text-lg text-black container mx-auto max-w-[1440px]">
+						<div class="rounded-[16px] border border-[1px] border-[rgb(255_255_255/0.08)] shadow-[0px_8px_24px_0px_rgba(0,0,0,0.45)] backdrop-blur-[16px] items-center h-[72px] my-[14px] mx-[40px] px-6 xl:px-[40px] lg:flex hidden justify-between">
+							<div class="font-bold text-[20px] text-[#00B2FF] font-geist">
+								HR.Tail
+							</div>
+							<ul class="flex gap-[40px]">
+								<li>
+									<a id="navFeatures" href="#features" class="flex items-center text-white opacity-[80%] text-[16px] font-regular py-[12px] px-[24px]">
+										Features
+									</a>
+								</li>
+								<li>
+									<a id="navUpdates" href="#updates" class="flex items-center text-white opacity-[80%] text-[16px] font-regular py-[12px] px-[24px]">
+										Real-time updates
+									</a>
+								</li>
+								
+								<li>
+									<a id="navAbout" href="#aboutUs" class="flex items-center text-white opacity-[80%] text-[16px] font-regular py-[12px] px-[24px]">
+										About Us
+									</a>
+								</li>
+							</ul>
+							<div class="flex items-center gap-[32px]">
+								<button id="getDemo" class="px-[24px] py-[12px] font-semibold text-[16px] text-white rounded-[12px] bg-gradient-to-r from-[#00B2FF] to-[#008AD4]">Get Demo</button>
+								<div class="relative" id="desktopLanguageSwitcher">
+									<a id="selectedLanguageDesktop" class="flex items-center gap-1 cursor-pointer h-[44px] rounded-full bg-gradient-to-b from-[rgba(255,255,255,0.40)] to-[rgba(255,255,255,0.32)] p-[1px]">
+										<div class="rounded-full bg-[#0A0A0A] flex items-center text-white h-full px-[16px] gap-[10px]">
+											EN
+											<img src="img/en.svg" alt="English Flag" class="flag w-6 h-6">
+											<img src="img/arrow.svg" alt="arrow" class="w-6 h-6">
+										</div>
+									</a>
+									
+									<div class="absolute w-[90px] hidden right-0 bg-white rounded-lg border mt-1" id="languageOptionsDesktop">
+										<a href="#" data-lang="ru" class="flex items-center gap-2 px-4 py-2 rounded-t-lg hover:bg-gray-100">
+											<img src="img/ru.svg" alt="Russian Flag" class="flag">
+											<span>ru</span>
+										</a>
+										<a href="#" data-lang="en" class="flex items-center gap-2 px-4 py-2 rounded-b-lg hover:bg-gray-100">
+											<img src="img/en.svg" alt="English Flag" class="flag">
+											<span>en</span>
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div id="navMobile" class="block lg:hidden bg-[#0D0C0E]">
+							<div class="flex items-center mx-[10px] my-[14px] px-[16px] h-[72px] rounded-[16px] border border-[1px] border-[rgb(255_255_255/0.08)] shadow-[0px_8px_24px_0px_rgba(0,0,0,0.45)] backdrop-blur-[16px]">
+								<div class="flex">
+									<button class="inline-flex items-center justify-center text-black hover:text-[#EDAC3D] focus:outline-none ">
+										<svg id="openIcon" onclick="openMobileMenu()" class="block h-7 w-7" width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4.66669 14H23.3334M4.66669 7H23.3334M4.66669 21H23.3334" stroke="#00A3B7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+
+										<svg id="closeIcon" onclick="closeMobileMenu()" class="hidden h-7 w-7" stroke="currentColor" fill="none" viewBox="0 0 24 24">
+										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+										</svg>
+									</button>
+								</div>
+								<div class="flex-grow font-bold text-[20px] text-[#00B2FF] font-geist ml-[24px]">
+									HR.Tail
+								</div>
+								
+								<div class="relative mr-2" id="mobileLanguageSwitcher">
+								    <a class="flex items-center gap-1 cursor-pointer" id="selectedLanguageMobile">
+								        <img src="img/en.svg" alt="English Flag" class="flag">
+								    </a>
+								    <div class="absolute w-[90px] hidden right-0  bg-[#0D0C0E] text-white rounded-lg border mt-1" id="languageOptionsMobile">
+								        <a href="#" data-lang="ru" class="flex items-center gap-2 px-4 py-2 rounded-t-lg hover:bg-gray-100">
+								            <img src="img/ru.svg" alt="Russian Flag" class="flag">
+								            <span>ru</span>
+								        </a>
+								        <a href="#" data-lang="en" class="flex items-center gap-2 px-4 py-2 rounded-b-lg hover:bg-gray-100">
+								            <img src="img/en.svg" alt="English Flag" class="flag">
+								            <span>en</span>
+								        </a>
+								    </div>
+								</div>
+								
+							</div>
+							<div id="mobileMenu" class="hidden bg-[#0D0C0E] w-full">
+								<ul class="py-6">
+									<li>
+										<a id="navFeatures1" href="#features" onclick="closeMobileMenu()" class="text-white block pl-8 py-2 transition duration-700 ease-in-out hover:font-semibold">features</a>
+									</li>
+									<li>
+										<a id="navUpdates1" href="#updates" onclick="closeMobileMenu()" class="text-white block pl-8 py-2 transition duration-700 ease-in-out">Updates</a>
+									</li>
+									<li>
+										<a id="navAbout1" href="#aboutus" onclick="closeMobileMenu()" class="text-white block pl-8 py-2 transition duration-700 ease-in-out">About</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</nav>
+				</header>
+				<main class="max-w-[1440px] mx-auto  flex items-center justify-center flex-grow font-montserrat">
+					<div class="flex flex-col text-black text-center items-center justify-center flex-grow">
+						<h1 id="mainHeading" class="text-[24px] lg:text-[64px] px-[16px] lg:px-0 font-bold text-white max-w-[1201px] mt-[146px] lg:mt-[184px] leading-[100%]">
+							Powerful Platform To Organize Your Workforce
+						</h1>
+						<h2 id="heading" class="text-[14px] lg:text-[24px] px-[16px] lg:px-0 mt-[23px] mb-[25px] lg:mb-[77px] font-regular text-[#8C8C8C] max-w-[994px] leading-[150%]">
+							Empower your HR team with seamless attendance tracking, shift scheduling, and productivity insights - all in one intiutive platform.
+						</h2>
+						<div class="block lg:hidden pb-[23px]">
+							<button id="getDemo1" class="font-montserrat px-[24px] py-[8px] font-semibold text-[16px] text-white rounded-[12px] bg-gradient-to-r from-[#00B2FF] to-[#008AD4]">Get Demo</button>
+						</div>
+						<div class="pb-[80px] lg:pb-[150px]">
+							<img src="img/mac1.png" class="h-[254px] lg:h-[488px] lg:w-[714px]">
+						</div>
+					</div>
+				</main>
+			</div>
+		
+		</div>
+		
+		<section id="aboutUs" class="bg-[#0D0C0E]">
+			<div class="mx-auto max-w-[1440px] bg-center bg-no-repeat bg-cover" style="background-image: url(img/background2.png);">
+				<div class="flex flex-col lg:flex-row lg:gap-[31px]">
+					<div class="lg:mt-[116px] pb-[80px] lg:pb-0">
+						<img src="img/mac2.png" class="h-[254px] lg:h-[419px]">
+					</div>
+					
+					<div class="max-w-[708px] font-poppins order-first lg:order-last pt-[35px] lg:pt-[55px] lg:pb-[155px] pb-[50px] px-[16px] lg:px-0">
+						<p class="font-medium font-poppins text-[14px] text-[21px] uppercase bg-gradient-to-r from-[#00B2FF] to-[#008AD4] text-transparent bg-clip-text">ABOUT US</p>
+						<p class="text-[20px] lg:text-[48px] font-bold lg:py-[26px] py-[10px] text-white leading-[125%] capitalize">We Help Companies work <span class="bg-gradient-to-r from-[#00B2FF] to-[#008AD4] text-transparent bg-clip-text">smarter</span>, Not harder.</p>
+						<span class="h-[3px] w-[97px] rounded-full bg-white block"></span>
+						<p class="text-[16px] lg:text-[17px] bg-gradient-to-r from-[#00B2FF] to-[#008AD4] text-transparent bg-clip-text py-[10px] lg:py-[26px]">our Mission</p>
+						<p class="text-[16px] lg:text-[21px] font-light text-white flex flex-col font-poppins lg:pb-[26px] pb-[10px] leading-[166%] tracking-[0.04em]">
+							<span>We’re on a mission to make digital experiences effortless and meaningful.</span>
+							<span>Through thoughtful design, we turn complex ideas into simple, intuitive, and beautiful interfaces that connect people with products they love.</span>
+							<span>Our focus is on usability, emotion, and detail — because great design isn’t just how it looks, it’s how it feels and works.</span>
+						</p>
+						<button class="inline-flex items-center justify-center py-[10px] px-[25px] rounded-[2px] border-[3px] border-solid border-transparent text-white font-medium uppercase text-[16px] lg:text-[17px] leading-[100%] tracking-[0.145em] relative bg-[#0A0A0A] border-[3px] border-solid [border-image-source:linear-gradient(90deg,#00B2FF,#008AD4)] [border-image-slice:1]">
+							Read More
+						</button>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="features" class="bg-[#0D0C0E]">
+			<div class="mx-auto max-w-[1440px] lg:px-[45px]" >
+				<div class="flex lg:flex-row  flex-col gap-[50px] lg:gap-[67px] lg:pt-[150px] lg:pb-[37px] pb-[74px]">
+					<div class="max-w-[589px] font-poppins px-[16px] lg:px-0">
+						<p class="font-medium font-poppins text-[14px] text-[21px] uppercase bg-gradient-to-r from-[#00B2FF] to-[#008AD4] text-transparent bg-clip-text uppercase">our Features</p>
+						<p class="text-[20px] lg:text-[48px] font-bold lg:py-[32px] py-[10px] text-white leading-[125%] capitalize">Smart Scheduling.</p>
+						<span class="h-[3px] w-[97px] rounded-full bg-white block"></span>
+						<p class="text-[16px] lg:text-[21px] font-light text-white flex flex-col font-poppins lg:py-[32px] py-[10px] leading-[166%] tracking-[0.04em]">
+							Take the guesswork out of planning your team’s day. Our smart scheduling system automatically organizes shifts, meetings, and tasks based on team availability and priorities. You can easily drag, adjust, and optimize schedules in real time — making sure every hour is used efficiently. Whether you’re managing a small team or an entire department, scheduling becomes simple, fast, and stress-free.
+						</p>
+						<button class="inline-flex items-center justify-center py-[10px] px-[25px] rounded-[2px] border-[3px] border-solid border-transparent text-white font-medium uppercase text-[16px] lg:text-[17px] leading-[100%] tracking-[0.145em] relative bg-[#0A0A0A] border-[3px] border-solid [border-image-source:linear-gradient(90deg,#00B2FF,#008AD4)] [border-image-slice:1]">
+							VIEW ALL
+						</button>
+					</div>
+					
+					<div class="font-poppins max-w-[708px] bg-center bg-no-repeat bg-cover px-[16px] lg:px-0" style="background-image: url(img/bgFeatures.png);">
+						<div class="flex items-center lg:gap-[38px] gap-[32px]">
+							<img src="img/SmartScheduling1.png" alt="" class="h-[155px] lg:h-[280px]">
+							<div class="text-center max-w-[303px]">
+								<p class="font-semibold text-[14px] lg:text-[20px] leading-[166%] tracking-[0.04em] bg-gradient-to-r from-[#00B2FF] to-[#008AD4] text-transparent bg-clip-text">Shift Optimization</p>
+								<p class="font-medium text-[12px] lg:text-[14px] leading-[166%] tracking-[0.04em] text-white pt-[10px] lg:pt-[15px]">Easily organize and assign shifts for your entire team with just a few clicks.</p>
+							</div>
+						</div>
+						<div class="flex items-center lg:gap-[42px] gap-[25px] pt-[20px] pb-[9px]">
+							<div class="text-center max-w-[303px]">
+								<p class="font-semibold text-[14px] lg:text-[20px] leading-[166%] tracking-[0.04em] bg-gradient-to-r from-[#00B2FF] to-[#008AD4] text-transparent bg-clip-text">Open Shift Management</p>
+								<p class="font-medium text-[12px] lg:text-[14px] leading-[166%] tracking-[0.04em] text-white pt-[10px] lg:pt-[15px]">Easily organize and assign shifts for your entire team with just a few clicks.</p>
+							</div>
+							<img src="img/SmartScheduling2.png" alt="" class="h-[155px] lg:h-[267px] lg:pr-[20px] pr-[10px]">
+						</div>
+					</div>
+					
+				</div>
+			</div>
+		</section>
+		<section  id="timeTracking" class="bg-[#0D0C0E]">
+			<div class="flex lg:flex-row flex-col items-end pt-[30px] lg:pt-0">
+				<div class="pr-[16px] pl-[16px] lg:pr-0 lg:pl-[45px] bg-center bg-no-repeat bg-cover lg:mb-[113px] mb-0" style="background-image: url(img/background2.png);">
+					<div class="max-w-[589px] font-poppins">
+						<p class="text-[20px] lg:text-[48px] font-bold lg:py-[32px] py-[10px] text-white leading-[125%] capitalize">Time Tracking.</p>
+						<span class="h-[3px] w-[97px] rounded-full bg-white block"></span>
+						<div class="flex flex-col">
+							<p class="text-[16px] lg:text-[21px] lg:pt-[23px] pt-[10px] font-light text-white font-poppins leading-[166%] tracking-[0.04em]">Take the guesswork out of planning your team’s day. Our smart scheduling system automatically organizes shifts, meetings, and tasks based on team </p> 
+							<div class="flex flex-col lg:gap-[23px] gap-[10px] lg:pt-[23px] pt-[10px] text-[16px] lg:text-[21px] font-light text-white font-poppins leading-[166%] tracking-[0.04em]">
+								<p>1. Take the guesswork out of planning your team’s day. Our smart scheduling system automatically organizes shifts, meetings, and tasks based on team </p>
+								<p>2. Take the guesswork out of planning your team’s day. Our smart scheduling system automatically organizes shifts, meetings, and tasks based on team </p>
+								<p>3. Take the guesswork out of planning your team’s day. Our smart scheduling system automatically </p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div>
+					<img src="img/timeTracking.png" alt="" class="w-[762px]">
+				</div>
+			</div>
+		</section>
+		<section id="payrollManagment" class="bg-[#0D0C0E]">
+			<div class="flex justify-between">
+				<div class="pt-0 lg:pt-[50px] pl-[16px] pr-[16px] lg:pl-[45px] lg:pr-0">
+					<div class="max-w-[708px] font-poppins ">
+						<p class="text-[20px] lg:text-[44px] font-bold lg:pb-[26px] pb-[10px] text-white leading-[125%] capitalize">Effortless Payroll Management</p>
+						<span class="h-[3px] w-[97px] rounded-full bg-white block"></span>
+						<p class="text-[16px] lg:text-[17px] bg-gradient-to-r from-[#00B2FF] to-[#008AD4] text-transparent bg-clip-text py-[10px] lg:py-[26px]">Payroll management</p>
+						<p class="text-[16px] lg:text-[20px] font-light text-white flex flex-col font-poppins leading-[166%] tracking-[0.04em]">
+							<span>Our smart payroll system automatically calculates salaries, overtime, and deductions based on tracked work hours and approvals. No more spreadsheets or manual corrections — everything is synced and accurate in real time. You can review, adjust, and confirm payouts with just a few clicks. Whether your team is on-site or remote, payroll processing becomes fast, transparent, and completely hassle-free.</span>
+						</p>
+					</div>
+				</div>
+				<div class="hidden lg:block bg-center bg-no-repeat bg-cover pr-[33px]" style="background-image: url(img/bg-payrollMan.png);">
+					<div class="flex flex-col gap-[40px] max-w-[554px] pt-[50px] pb-[115px] ">
+						<div class="flex items-start justify-between w-full">
+							<div class="flex flex-col">
+								<span class="text-white text-[22px] leading-[28px] tracking-[-0.26px]">Payroll Summary</span>
+								<span class="text-white text-[22px] leading-[28px] tracking-[-0.26px]">From 1-31 October, 2025</span>
+							</div>
+							<div class="text-[#3981F7] text-[28px] leading-[34px] tracking-[0.38px]">View report</div>
+						</div>
+						<div class="flex gap-[100px]">
+							<div class="flex gap-[12px]">
+								<span class="w-[4px] h-[56px] rounded-[4px] bg-[#51C6FB] block"></span>
+								<div class="flex flex-col gap-[4px]">
+									<span class="font-montserrat text-[#FEF7FF] font-semibold text-[16px] leading-[24px] tracking-[0.15px]">Payment</span>
+									<div class="font-montserrat text-[#FEF7FF] font-medium text-[24px] leading-[140%] tracking-[-0.01em]">
+										$181 <span class="text-[#9096A2]">.34</span>
+									</div>
+								</div>
+							</div>
+							<div class="flex gap-[12px]">
+								<span class="w-[4px] h-[56px] rounded-[4px] bg-white block"></span>
+								<div class="flex flex-col gap-[4px]">
+									<span class="font-montserrat text-[#FEF7FF] font-semibold text-[16px] leading-[24px] tracking-[0.15px]">Pending</span>
+									<div class="font-montserrat text-[#FEF7FF] font-medium text-[24px] leading-[140%] tracking-[-0.01em]">
+										$37 <span class="text-[#9096A2]">.13</span>
+									</div>
+								</div>
+							</div>
+							<div class="flex gap-[12px]">
+								<span class="w-[4px] h-[56px] rounded-[4px] bg-[#3981F7] block"></span>
+								<div class="flex flex-col gap-[4px]">
+									<span class="font-montserrat text-[#FEF7FF] font-semibold text-[16px] leading-[24px] tracking-[0.15px]">Paid</span>
+									<div class="font-montserrat text-[#FEF7FF] font-medium text-[24px] leading-[140%] tracking-[-0.01em]">
+										$234 <span class="text-[#9096A2]">.20</span>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="flex justify-center">
+							<img src="img/payrollManagment.png" alt="" class="w-[326px] pb-[24px]">
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section>
+			scroll
+		</section>
+		<section class="bg-[#0D0C0E]">
+			<div class="flex items-center justify-center flex-col max-w-[654px] mx-auto lg:py-[150px] py-[80px] px-[16px] lg:px-0">
+				<div class="font-bold text-white text-[20px] lg:text-[48px] leading-[48px]">Ready To Get Started?</div>
+				<p class="text-center font-light text-white text-[16px] lg:text-[24px] leading-[166%] tracking-[0.04em] pt-[10px] lg:pt-[24px] pb-[53px]">See how HR Tail can simplify scheduling, tracking, and team management — all in one place.</p>
+				<div class="flex gap-[16px] items-center justify-center">
+					<div class="lg:w-[316px] h-[49px] rounded-[12px]">
+						<input type="email" class="w-full h-full rounded-[12px] bg-[rgba(206,201,211,0.15)] font-medium text-[14px] px-[24px] py-[16px] placeholder:text-[#aaaaaa] text-[#aaaaaa] focus:outline-none" placeholder="Your email">
+					</div>
+					<button class="px-[24px] h-[49px] font-bold text-[20px] text-white rounded-[12px] bg-gradient-to-r from-[#00B2FF] to-[#008AD4]">Get Demo</button>
+				</div>
+			</div>
+		</section>
+		
+		<footer id="contacts">
+			<div>
+				<div class="bg-[#161923] py-10 md:py-[49px] px-[104px] border-t border-[#484C54] lg:block hidden">
+					<div class="pb-[48px] flex gap-[64px]">
+						<div class="flex flex-col gap-[24px]">
+							<p class="font-bold text-white text-[20px] leading-[28px]">HRTail</p>
+							<div class="text-[#9CA3AF] text-[16px] leading-[26px]">
+								<p>HR Tail provides reliable solutions for workforce scheduling,</p>
+								<p>attendance tracking, and payroll management. </p>
+								<p>Built for businesses that value efficiency, clarity, and growth. </p>
+							</div>
+						</div>
+						<div class="flex flex-col gap-[24px] w-[211px]">
+							<p class="font-bold text-white text-[20px] leading-[28px]">About us</p>
+							<div class="text-[#9CA3AF] text-[16px] leading-[26px]">
+								<p>Trusted By</p>
+								<p>Contacts</p>
+							</div>
+						</div>
+						<div class="flex flex-col gap-[24px] w-[211px]">
+							<p class="font-bold text-white text-[20px] leading-[28px]">Features</p>
+							<div class="text-[#9CA3AF] text-[16px] leading-[26px]">
+								<p>Smart Scheduling</p>
+								<p>Time Tracking</p>
+								<p>Payroll Management</p>
+							</div>
+						</div>
+						<div class="flex flex-col gap-[24px] w-[140px]">
+							<p class="font-bold text-white text-[20px] leading-[28px] whitespace-nowrap ">Real-time updates</p>
+							<div class="text-[#9CA3AF] text-[16px] leading-[26px]">
+								<p>Changelog</p>
+							</div>
+						</div>
+					</div>
+					<div class="text-[#6B7280] text-[14px] leading-[20px] flex items-center justify-between pt-[24px] border-t border-[#484C54]">
+						<div>© 2025 HRTail. All rights reserved.</div>
+						<div class="flex gap-[24px]">
+							<p>Terms of Service</p>
+							<p>Privacy Policy</p>
+						</div>
+					</div>
+				</div>
+				<div class="bg-gradient-to-r from-[#00B2FF] to-[#008AD4] text-center px-[20px] block lg:hidden">
+					<p class="font-geist font-bold text-[36px] leading-[100%] py-[35px]">HR.Tail</p>
+					<div class="flex flex-col gap-[24px] pt-[24px]">
+						<div class="w-full h-[50px] rounded-[5px]">
+							<input type="email" class="w-full h-full rounded-[12px] leading-[100%] bg-[rgba(0,0,0,0.2)] font-light text-[20px] px-[13px] py-[13px] placeholder:text-white text-white focus:outline-none" placeholder="Email">
+						</div>
+						<button class="px-[13px] h-[50px] font-semibold text-[20px] leading-[100%] text-black rounded-[5px] bg-white">Get Demo</button>
+					</div>
+					<div class="py-[50px] flex items-center justify-between">
+						<p class="font-semibold text-[18px] leading-[100%] uppercase text-white">Follow us</p>
+						<div class="flex items-center gap-[18px]">
+							<a href="">
+								<svg width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="18.8131" cy="18.8131" r="18.4369" stroke="white" stroke-width="0.752525"/><path d="M20.6238 20.659H23.1518L24.163 16.6142H20.6238V14.5918C20.6238 13.5503 20.6238 12.5694 22.6462 12.5694H24.163V9.17184C23.8333 9.12836 22.5885 9.03027 21.274 9.03027C18.5286 9.03027 16.579 10.7058 16.579 13.7829V16.6142H13.5454V20.659H16.579V29.2541H20.6238V20.659Z" fill="white"/></svg>
+							</a>
+							<a href="">
+								<svg width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="18.8131" cy="18.8131" r="18.4369" stroke="white" stroke-width="0.752525"/><path d="M29.4319 12.5575C28.6533 12.9115 27.814 13.144 26.9444 13.2553C27.8342 12.7193 28.5218 11.8699 28.8454 10.8486C28.0061 11.3542 27.0758 11.7081 26.095 11.9104C25.2961 11.0408 24.1737 10.5352 22.8996 10.5352C20.5233 10.5352 18.5818 12.4766 18.5818 14.8732C18.5818 15.217 18.6223 15.5507 18.693 15.8641C15.0932 15.6821 11.8877 13.953 9.75411 11.334C9.37997 11.971 9.16762 12.7193 9.16762 13.5081C9.16762 15.0147 9.92601 16.3495 11.099 17.1079C10.381 17.1079 9.71366 16.9057 9.12717 16.6023V16.6326C9.12717 18.7359 10.6237 20.4954 12.6057 20.8898C11.9695 21.0646 11.3013 21.0889 10.6541 20.9605C10.9287 21.8226 11.4666 22.5768 12.1921 23.1173C12.9176 23.6578 13.7943 23.9574 14.6988 23.9739C13.1655 25.1878 11.2648 25.844 9.30919 25.8345C8.96538 25.8345 8.62158 25.8143 8.27777 25.7738C10.199 27.0075 12.4843 27.7254 14.9314 27.7254C22.8996 27.7254 27.2781 21.1122 27.2781 15.3788C27.2781 15.1866 27.2781 15.0046 27.2679 14.8125C28.1173 14.2058 28.8454 13.4373 29.4319 12.5575Z" fill="white"/></svg>
+							</a>
+							<a href="">
+								<svg width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="18.8131" cy="18.8131" r="18.4369" stroke="white" stroke-width="0.752525"/><path d="M17.1198 22.1524L22.3679 19.1189L17.1198 16.0853V22.1524ZM28.8092 14.2348C28.9407 14.7101 29.0317 15.3471 29.0923 16.1561C29.1631 16.965 29.1935 17.6628 29.1935 18.2695L29.2541 19.1189C29.2541 21.3334 29.0923 22.9614 28.8092 24.0029C28.5564 24.913 27.9699 25.4995 27.0598 25.7523C26.5846 25.8837 25.715 25.9747 24.3802 26.0354C23.0656 26.1062 21.8623 26.1365 20.75 26.1365L19.1422 26.1972C14.9053 26.1972 12.2661 26.0354 11.2246 25.7523C10.3145 25.4995 9.72803 24.913 9.47523 24.0029C9.34377 23.5277 9.25277 22.8906 9.19209 22.0817C9.12131 21.2727 9.09098 20.575 9.09098 19.9683L9.0303 19.1189C9.0303 16.9044 9.19209 15.2763 9.47523 14.2348C9.72803 13.3247 10.3145 12.7382 11.2246 12.4855C11.6998 12.354 12.5695 12.263 13.9042 12.2023C15.2188 12.1315 16.4221 12.1012 17.5344 12.1012L19.1422 12.0405C23.3791 12.0405 26.0183 12.2023 27.0598 12.4855C27.9699 12.7382 28.5564 13.3247 28.8092 14.2348Z" fill="white"/></svg>
+							</a>
+						</div>
+					</div>
+					<div class="flex justify-between pb-[33px]">
+						<div class="text-left">
+							<p class="font-semibold text-[18px] leading-[100%] uppercase text-white">Contact us</p>
+							<div class="flex flex-col gap-[10px] font-medium text-[16px] leading-[100%] uppercase text-[#E1E1E1] pt-[16px]">
+								<p>123 Simply quidem</p>
+								<p>soluta Lorem</p>
+								<p>The Park</p>
+								<p>AB 10000</p>
+							</div>
+						</div>
+						<div class="text-left">
+							<p class="font-semibold text-[18px] leading-[100%] uppercase text-white">quick links</p>
+							<div class="flex flex-col gap-[10px] font-medium text-[16px] leading-[100%] uppercase text-[#E1E1E1] pt-[16px]">
+								<p>Features</p>
+								<p>Real-time Updates</p>
+								<p>About us</p>
+							</div>
+						</div>
+					</div>
+					<div class="pb-[21px] text-left">
+						<p class="font-semibold text-[18px] leading-[100%] uppercase text-white">Phone no.</p>
+						<div class="flex flex-col gap-[10px] font-medium text-[16px] leading-[100%] uppercase text-[#E1E1E1] pt-[16px]">
+							<p>(123) 4567890</p>
+						</div>
+					</div>
+					<div class="pb-[35px] text-left">
+						<p class="font-semibold text-[18px] leading-[100%] uppercase text-white">Email</p>
+						<div class="flex flex-col gap-[10px] font-medium text-[16px] leading-[100%] uppercase text-[#E1E1E1] pt-[16px]">
+							<p>abc123@gmail.com</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+
+	</div>
+	<script src="st.js"></script>
+</body>
+</html>
