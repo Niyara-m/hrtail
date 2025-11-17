@@ -8,6 +8,8 @@
 	<!-- <title>HR</title> -->
 	<title>HR.tail - Powerful Platform To Organize Your Workforce</title>
 
+	<link rel="stylesheet" href="./node_modules/@splidejs/splide/dist/css/splide.min.css">
+	<!-- <link rel="stylesheet" href="./node_modules/@splidejs/splide/dist/css/splide-core.min.css"> -->
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<script src="https://cdn.tailwindcss.com"></script>
 
@@ -269,8 +271,47 @@
 				</div>
 			</div>
 		</section>
-		<section>
-			scroll
+
+		<section class="bg-[#0D0C0E] text-white">
+			<div class="pt-[50px] lg:pt-[150px] w-[396px] lg:w-[1124px] mx-auto">
+				<div class="lg:h-[726px] border-t border-t-[rgba(255,255,255,0.12)] py-[24px] pl-[20px] lg:py-[48px] lg:pl-[40px] bg-center bg-no-repeat bg-cover bg-[url('img/bgslayder.png')]">
+					<section id="carousel" class="splide" aria-label="Slide Container Example">
+						<div class="splide__track">
+							<ul class="splide__list">
+								<li class="splide__slide">
+									<div class="splide__slide__container">
+										<img src="img/slide1.png" alt="" class="lg:w-[973px] lg:h-[529px] h-[219px]">
+									</div>
+								</li>
+								<li class="splide__slide">
+									<div class="splide__slide__container">
+										<img src="img/slide2.png" alt="" class="lg:w-[973px] lg:h-[529px] h-[219px]">
+									</div>
+								</li>
+								<li class="splide__slide">
+									<div class="splide__slide__container">
+										<img src="img/slide2.png" alt="" class="lg:w-[973px] lg:h-[529px] h-[219px]">
+									</div>
+								</li>
+							</ul>
+						</div>
+						<div class="flex items-center justify-center pt-[48px]">
+							<div class="splide__arrows flex items-center justify-between gap-[8px]">
+								<button class="splide__arrow--prev w-[26px] h-[26px] rounded-full bg-[#1E1D1F] flex items-center justify-center rotate-180 text-white">
+									<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" /></svg>
+								</button>
+								<ul class="splide__pagination flex gap-[8px] static p-0" role="tablist">
+								</ul>
+								<button class="splide__arrow--next w-[26px] h-[26px] rounded-full bg-[#1E1D1F] flex items-center justify-center text-white">
+									<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4"><path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" /></svg>
+								</button>
+							</div>
+						</div>
+					</section>
+				</div>
+			</div>
+			
+			
 		</section>
 		<section class="bg-[#0D0C0E]">
 			<div class="flex items-center justify-center flex-col max-w-[654px] mx-auto lg:py-[150px] py-[80px] px-[16px] lg:px-0">
@@ -385,6 +426,23 @@
 		</footer>
 
 	</div>
+	<script>
+		document.addEventListener('DOMContentLoaded', function () {
+		new Splide('#carousel', {
+			type: 'loop',
+			perPage: 1,
+  			perMove: 1,
+			padding: {
+				right: '10%',
+				left: '0',
+			},
+			gap: '30px',
+			arrows: true,    // стрелки
+			pagination: true, // точки
+		}).mount();
+		});
+	</script>
 	<script src="st.js"></script>
+	<script  src="./node_modules/@splidejs/splide/dist/js/splide.min.js"></script>
 </body>
 </html>

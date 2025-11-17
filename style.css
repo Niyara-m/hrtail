@@ -7,6 +7,28 @@ html {
   padding: 0;
 }
 
+.splide__pagination__page {
+    background: #2C2C2D;
+    border: 0;
+    border-radius: 50%;
+    display: inline-block;
+    height: 10px;
+    margin: 3px;
+    
+    padding: 0;
+    position: relative;
+    transition: transform .2s linear;
+    width: 10px;
+}
+
+.splide__pagination__page.is-active {
+    background: #ffffff;
+    transform: scale(1.4);
+    z-index: 1;
+    width: 18px;
+    border-radius:10px;
+}
+
 .font-geist {
     font-family: "Geist", sans-serif;
 }
