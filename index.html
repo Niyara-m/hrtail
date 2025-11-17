@@ -361,64 +361,47 @@
 						</div>
 					</div>
 					<div class="text-[#6B7280] text-[14px] leading-[20px] flex items-center justify-between pt-[24px] border-t border-[#484C54]">
-						<div>© 2025 HRTail. All rights reserved.</div>
+						<div>© <span id="year"></span> HRTail. All rights reserved.</div>
 						<div class="flex gap-[24px]">
 							<p>Terms of Service</p>
 							<p>Privacy Policy</p>
 						</div>
 					</div>
 				</div>
-				<div class="bg-gradient-to-r from-[#00B2FF] to-[#008AD4] text-center px-[20px] block lg:hidden">
-					<p class="font-geist font-bold text-[36px] leading-[100%] py-[35px]">HR.Tail</p>
-					<div class="flex flex-col gap-[24px] pt-[24px]">
-						<div class="w-full h-[50px] rounded-[5px]">
-							<input type="email" class="w-full h-full rounded-[12px] leading-[100%] bg-[rgba(0,0,0,0.2)] font-light text-[20px] px-[13px] py-[13px] placeholder:text-white text-white focus:outline-none" placeholder="Email">
-						</div>
-						<button class="px-[13px] h-[50px] font-semibold text-[20px] leading-[100%] text-black rounded-[5px] bg-white">Get Demo</button>
-					</div>
-					<div class="py-[50px] flex items-center justify-between">
-						<p class="font-semibold text-[18px] leading-[100%] uppercase text-white">Follow us</p>
-						<div class="flex items-center gap-[18px]">
-							<a href="">
-								<svg width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="18.8131" cy="18.8131" r="18.4369" stroke="white" stroke-width="0.752525"/><path d="M20.6238 20.659H23.1518L24.163 16.6142H20.6238V14.5918C20.6238 13.5503 20.6238 12.5694 22.6462 12.5694H24.163V9.17184C23.8333 9.12836 22.5885 9.03027 21.274 9.03027C18.5286 9.03027 16.579 10.7058 16.579 13.7829V16.6142H13.5454V20.659H16.579V29.2541H20.6238V20.659Z" fill="white"/></svg>
-							</a>
-							<a href="">
-								<svg width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="18.8131" cy="18.8131" r="18.4369" stroke="white" stroke-width="0.752525"/><path d="M29.4319 12.5575C28.6533 12.9115 27.814 13.144 26.9444 13.2553C27.8342 12.7193 28.5218 11.8699 28.8454 10.8486C28.0061 11.3542 27.0758 11.7081 26.095 11.9104C25.2961 11.0408 24.1737 10.5352 22.8996 10.5352C20.5233 10.5352 18.5818 12.4766 18.5818 14.8732C18.5818 15.217 18.6223 15.5507 18.693 15.8641C15.0932 15.6821 11.8877 13.953 9.75411 11.334C9.37997 11.971 9.16762 12.7193 9.16762 13.5081C9.16762 15.0147 9.92601 16.3495 11.099 17.1079C10.381 17.1079 9.71366 16.9057 9.12717 16.6023V16.6326C9.12717 18.7359 10.6237 20.4954 12.6057 20.8898C11.9695 21.0646 11.3013 21.0889 10.6541 20.9605C10.9287 21.8226 11.4666 22.5768 12.1921 23.1173C12.9176 23.6578 13.7943 23.9574 14.6988 23.9739C13.1655 25.1878 11.2648 25.844 9.30919 25.8345C8.96538 25.8345 8.62158 25.8143 8.27777 25.7738C10.199 27.0075 12.4843 27.7254 14.9314 27.7254C22.8996 27.7254 27.2781 21.1122 27.2781 15.3788C27.2781 15.1866 27.2781 15.0046 27.2679 14.8125C28.1173 14.2058 28.8454 13.4373 29.4319 12.5575Z" fill="white"/></svg>
-							</a>
-							<a href="">
-								<svg width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="18.8131" cy="18.8131" r="18.4369" stroke="white" stroke-width="0.752525"/><path d="M17.1198 22.1524L22.3679 19.1189L17.1198 16.0853V22.1524ZM28.8092 14.2348C28.9407 14.7101 29.0317 15.3471 29.0923 16.1561C29.1631 16.965 29.1935 17.6628 29.1935 18.2695L29.2541 19.1189C29.2541 21.3334 29.0923 22.9614 28.8092 24.0029C28.5564 24.913 27.9699 25.4995 27.0598 25.7523C26.5846 25.8837 25.715 25.9747 24.3802 26.0354C23.0656 26.1062 21.8623 26.1365 20.75 26.1365L19.1422 26.1972C14.9053 26.1972 12.2661 26.0354 11.2246 25.7523C10.3145 25.4995 9.72803 24.913 9.47523 24.0029C9.34377 23.5277 9.25277 22.8906 9.19209 22.0817C9.12131 21.2727 9.09098 20.575 9.09098 19.9683L9.0303 19.1189C9.0303 16.9044 9.19209 15.2763 9.47523 14.2348C9.72803 13.3247 10.3145 12.7382 11.2246 12.4855C11.6998 12.354 12.5695 12.263 13.9042 12.2023C15.2188 12.1315 16.4221 12.1012 17.5344 12.1012L19.1422 12.0405C23.3791 12.0405 26.0183 12.2023 27.0598 12.4855C27.9699 12.7382 28.5564 13.3247 28.8092 14.2348Z" fill="white"/></svg>
-							</a>
-						</div>
-					</div>
-					<div class="flex justify-between pb-[33px]">
+				<div class="bg-[#161923] text-center px-[20px] block lg:hidden">
+					<p class="text-left font-geist font-bold text-[24px] leading-[100%] pt-[32px] pb-[16px] text-white">HR.Tail</p>
+			
+					<div class="flex gap-[68px]">
 						<div class="text-left">
-							<p class="font-semibold text-[18px] leading-[100%] uppercase text-white">Contact us</p>
-							<div class="flex flex-col gap-[10px] font-medium text-[16px] leading-[100%] uppercase text-[#E1E1E1] pt-[16px]">
-								<p>123 Simply quidem</p>
-								<p>soluta Lorem</p>
-								<p>The Park</p>
-								<p>AB 10000</p>
+							<div class="pb-[16px] text-left">
+								<p class="font-semibold text-[16px] leading-[24px] text-white">Phone no.</p>
+								<div class="flex flex-col gap-[10px] font-medium text-[16px] leading-[24px] text-[#9CA3AF] pt-[16px]">
+									<a href="tel:998909009090">(123) 4567890</a>
+								</div>
+							</div>
+							<div class="text-left">
+								<p class="font-semibold text-[16px] leading-[24px] text-white">Email</p>
+								<div class="flex flex-col gap-[10px] font-medium text-[16px] leading-[24px] text-[#9CA3AF] pt-[16px]">
+									<a href="mailto:abc123@gmail.com">abc123@gmail.com</a>
+								</div>
 							</div>
 						</div>
 						<div class="text-left">
-							<p class="font-semibold text-[18px] leading-[100%] uppercase text-white">quick links</p>
-							<div class="flex flex-col gap-[10px] font-medium text-[16px] leading-[100%] uppercase text-[#E1E1E1] pt-[16px]">
-								<p>Features</p>
-								<p>Real-time Updates</p>
-								<p>About us</p>
+							<p class="font-semibold text-[16px] leading-[24px] text-white">Quick links</p>
+							<div class="flex flex-col gap-[16px] font-medium text-[16px] leading-[24px] text-[#9CA3AF] pt-[16px]">
+								<a href="#features">Features</a>
+								<a href="#updates">Real-time Updates</a>
+								<a href="#aboutUs">About us</a>
 							</div>
 						</div>
 					</div>
-					<div class="pb-[21px] text-left">
-						<p class="font-semibold text-[18px] leading-[100%] uppercase text-white">Phone no.</p>
-						<div class="flex flex-col gap-[10px] font-medium text-[16px] leading-[100%] uppercase text-[#E1E1E1] pt-[16px]">
-							<p>(123) 4567890</p>
+					<div class="pb-[34px]">
+						<div class="flex gap-[105px] text-[#6B7280] text-[14px] leading-[20px] pb-[12px] pt-[16px]">
+								<p>Terms of Service</p>
+								<p>Privacy Policy</p>
 						</div>
-					</div>
-					<div class="pb-[35px] text-left">
-						<p class="font-semibold text-[18px] leading-[100%] uppercase text-white">Email</p>
-						<div class="flex flex-col gap-[10px] font-medium text-[16px] leading-[100%] uppercase text-[#E1E1E1] pt-[16px]">
-							<p>abc123@gmail.com</p>
+						<div class="text-left text-[#6B7280] text-[14px] leading-[20px] pt-[24px] border-t border-[#484C54]">
+							<div>© <span id="year"></span> HRTail. All rights reserved.</div>
 						</div>
 					</div>
 				</div>

@@ -157,3 +157,8 @@ document.addEventListener('DOMContentLoaded', function() {
     window.addEventListener('scroll', setActiveLink);
 });
 
+
+var newDate = new Date();
+var year = newDate.getUTCFullYear();
+
+document.getElementById("year").innerHTML = year;
