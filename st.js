@@ -109,18 +109,6 @@ var year = newDate.getUTCFullYear();
 
 document.getElementById("year").innerHTML = year;
 
-window.onscroll = function () { 
-    "use strict";
-    if (document.body.scrollTop >= 140 || document.documentElement.scrollTop >= 140) {
-        nav.classList.add("bg-white", "opacity-95", "transition", "duration-700", "ease-in-out");
-        nav.classList.remove("bg-transparent");
-    } 
-    else {
-        nav.classList.add("bg-transparent");
-        nav.classList.remove("bg-white", "opacity-95");
-    }
-};
-
 function openMobileMenu() {
     document.getElementById('mobileMenu').style.display = 'block';
     document.getElementById('openIcon').style.display = 'none';
@@ -158,7 +146,3 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
-var newDate = new Date();
-var year = newDate.getUTCFullYear();
-
-document.getElementById("year").innerHTML = year;
