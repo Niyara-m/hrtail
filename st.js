@@ -54,6 +54,8 @@ const updateContent = (selectedLang) => {
     
 };
 
+
+
 const handleLanguageChange = (switcherId, optionsId, selectedLanguageId) => {
     document.getElementById(selectedLanguageId).addEventListener('click', function() {
         document.getElementById(optionsId).classList.toggle('hidden');
@@ -66,15 +68,30 @@ const handleLanguageChange = (switcherId, optionsId, selectedLanguageId) => {
             const selectedFlag = option.querySelector('img').src;
             const selectedText = option.querySelector('span').textContent;
 
-            document.getElementById(selectedLanguageId).innerHTML = `
+            document.getElementById('selectedLanguageDesktop').innerHTML = `
                 <div class="rounded-full bg-[#0A0A0A] flex items-center text-white h-full px-[16px] gap-[10px]">
-                    <span class="uppercase">${selectedLang} </span>
                     <img src="${selectedFlag}" alt="${selectedLang} Flag" class="flag w-6 h-6">
+                    <span class="uppercase text-[24px] font-semibold leading-[100%]">${selectedLang} </span>
                     <img src="img/arrow.svg" alt="arrow" class="w-6 h-6">
                 </div>
             `;
+            document.getElementById('selectedLanguageMobile').innerHTML = `
+                <img src="${selectedFlag}" alt="${selectedLang} Flag" class="flag w-6 h-6">
+                <img src="img/arrow.svg" alt="arrow" class="w-6 h-6">
+            `;
 
             updateContent(selectedLang);
+
+            // 🔥 НОВОЕ — ПЕРЕСТАВЛЯЕМ ГАЛОЧКУ К ВЫБРАННОМУ ЯЗЫКУ
+            document.querySelectorAll(`#${optionsId} a .check`).forEach(el => {
+                el.classList.add('hidden');   // убираем у всех
+            });
+
+            option.querySelector('.check').classList.remove('hidden'); // показываем у выбранного
+
+            const arrow = document.getElementById(selectedLanguageId).querySelector('.arrow');
+            arrow.style.transform = 'rotate(0deg)';
+
 
             document.getElementById(optionsId).classList.add('hidden');
         });
@@ -90,14 +107,15 @@ const defaultLanguage = 'ru';
 const defaultFlag = 'img/ru.svg';
 document.getElementById('selectedLanguageDesktop').innerHTML = `
     <div class="rounded-full bg-[#0A0A0A] flex items-center text-white h-full px-[16px] gap-[10px]">
-        <span class="uppercase">${defaultLanguage} </span>
         <img src="${defaultFlag}" alt="${defaultLanguage} Flag" class="flag w-6 h-6">
+        <span class="uppercase text-[24px] font-semibold leading-[100%]">${defaultLanguage} </span>
         <img src="img/arrow.svg" alt="arrow" class="w-6 h-6">
     </div>
     
 `;
 document.getElementById('selectedLanguageMobile').innerHTML = `
     <img src="${defaultFlag}" alt="${defaultLanguage} Flag" class="flag w-6 h-6">
+    <img src="img/arrow.svg" alt="arrow" class="w-6 h-6">
 `;
 updateContent(defaultLanguage);
 
@@ -113,14 +131,12 @@ function openMobileMenu() {
     document.getElementById('mobileMenu').style.display = 'block';
     document.getElementById('openIcon').style.display = 'none';
     document.getElementById('closeIcon').style.display = 'block';
-    navMobile.classList.add("bg-[#0D0C0E]");
 }
 
 function closeMobileMenu() {
     document.getElementById('mobileMenu').style.display = 'none';
     document.getElementById('openIcon').style.display = 'block';
     document.getElementById('closeIcon').style.display = 'none';
-    navMobile.classList.remove("bg-[#0D0C0E]");
 }
 
 // Activ for nav elements
