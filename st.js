@@ -307,9 +307,9 @@ const handleLanguageChange = (switcherId, optionsId, selectedLanguageId) => {
             const selectedText = option.querySelector('span').textContent;
 
             document.getElementById('selectedLanguageDesktop').innerHTML = `
-                <div class="rounded-full bg-[#0A0A0A] flex items-center text-white h-full px-[16px] gap-[10px]">
+                <div class="rounded-[12px] bg-[#0A0A0A] flex items-center text-white h-full px-[12px] gap-[10px]">
                     <img src="${selectedFlag}" alt="${selectedLang} Flag" class="flag w-6 h-6">
-                    <span class="uppercase text-[24px] font-semibold leading-[100%]">${selectedLang} </span>
+                    <span class="uppercase text-[16px] font-semibold leading-[100%]">${selectedLang} </span>
                     <img src="img/arrow.svg" alt="arrow" class="w-6 h-6">
                 </div>
             `;
@@ -344,9 +344,9 @@ handleLanguageChange('mobileLanguageSwitcher', 'languageOptionsMobile', 'selecte
 const defaultLanguage = 'ru';
 const defaultFlag = 'img/ru.svg';
 document.getElementById('selectedLanguageDesktop').innerHTML = `
-    <div class="rounded-full bg-[#0A0A0A] flex items-center text-white h-full px-[16px] gap-[10px]">
+    <div class="rounded-[12px] bg-[#0A0A0A] flex items-center text-white h-full px-[12px] gap-[10px]">
         <img src="${defaultFlag}" alt="${defaultLanguage} Flag" class="flag w-6 h-6">
-        <span class="uppercase text-[24px] font-semibold leading-[100%]">${defaultLanguage} </span>
+        <span class="uppercase text-[16px] font-semibold leading-[100%]">${defaultLanguage} </span>
         <img src="img/arrow.svg" alt="arrow" class="w-6 h-6">
     </div>
     

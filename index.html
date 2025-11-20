@@ -43,25 +43,30 @@
 								</li>
 							</ul>
 							<div class="flex items-center gap-[32px]">
+								<button id="login" class="relative px-[2px] py-[2px] font-semibold text-[16px] text-[#00B2FF] rounded-[12px] border-none bg-gradient-to-r from-[#00B2FF] to-[#008AD4]" >
+									<span class="block bg-[#1C1B1C] rounded-[9px] px-[24px] py-[10px] ">
+										Login
+									</span>
+								</button>
 								<button id="getDemo" class="px-[24px] py-[12px] font-semibold text-[16px] text-white rounded-[12px] bg-gradient-to-r from-[#00B2FF] to-[#008AD4]">Get Demo</button>
 								<div class="relative" id="desktopLanguageSwitcher">
-									<a id="selectedLanguageDesktop" class="flex items-center gap-1 cursor-pointer w-[139px] h-[44px] rounded-full bg-gradient-to-b from-[rgba(255,255,255,0.40)] to-[rgba(255,255,255,0.32)] p-[1px]">
-										<div class="rounded-full bg-[#0A0A0A] flex items-center text-white h-full px-[16px] gap-[10px]">
+									<a id="selectedLanguageDesktop" class="flex items-center gap-1 cursor-pointer w-[112px] h-[44px] rounded-[12px] bg-gradient-to-b from-[rgba(255,255,255,0.40)] to-[rgba(255,255,255,0.32)] p-[1px]">
+										<div class="rounded-[12px] bg-[#0A0A0A] flex items-center text-white h-full px-[12px] gap-[10px]">
 											EN
 											<img src="img/en.svg" alt="English Flag" class="flag w-6 h-6">
 											<img src="img/arrow.svg" alt="arrow" class="w-6 h-6 arrow transition-transform duration-300">
 										</div>
 									</a>
 									
-									<div  id="languageOptionsDesktop" class="absolute w-[139px] hidden right-0 bg-[#222222] border border-gray-500 mt-[19px]">
-										<a href="#" data-lang="ru" class="flex items-center gap-[10px] px-[19px] py-2">
+									<div  id="languageOptionsDesktop" class="absolute w-[112px] hidden right-0 bg-[#222222] border border-gray-500 mt-[19px]">
+										<a href="#" data-lang="ru" class="flex items-center gap-[10px] px-[12px] py-2">
 											<img src="img/ru.svg" alt="Russian Flag" class="flag">
-											<span class="font-semibold text-[24px] leading-[100%] text-white capitalize">ru</span>
+											<span class="font-semibold text-[16px] leading-[100%] text-white capitalize">ru</span>
 											<img src="img/check.svg" alt="" class="w-6 h-6 check hidden">
 										</a>
-										<a href="#" data-lang="en" class="flex items-center gap-[10px] px-[19px] py-2">
+										<a href="#" data-lang="en" class="flex items-center gap-[10px] px-[12px] py-2">
 											<img src="img/en.svg" alt="English Flag" class="flag">
-											<span class="font-semibold text-[24px] leading-[100%] text-white capitalize">en</span>
+											<span class="font-semibold text-[16px] leading-[100%] text-white capitalize">en</span>
 											<img src="img/check.svg" alt="" class="w-6 h-6 check hidden">
 										</a>
 									</div>
@@ -82,25 +87,30 @@
 								<a href="#content" class="flex-grow font-bold text-[20px] text-[#00B2FF] font-geist ml-[24px]">
 									HR.Tail
 								</a>
-								
-								<div class="relative mr-2" id="mobileLanguageSwitcher">
-								    <a class="flex items-center gap-1 cursor-pointer" id="selectedLanguageMobile">
-								        <img src="img/en.svg" alt="English Flag" class="flag">
-								    </a>
-								    <div class="absolute w-[139px] hidden right-0 bg-[#222222] border border-gray-500 mt-[19px]" id="languageOptionsMobile">
-								        <a href="#" data-lang="ru" class="flex items-center gap-[10px] px-[19px] py-2">
-											<img src="img/ru.svg" alt="Russian Flag" class="flag">
-											<span class="font-semibold text-[24px] leading-[100%] text-white capitalize">ru</span>
-											<img src="img/check.svg" alt="" class="w-6 h-6 check hidden">
-										</a>
-										<a href="#" data-lang="en" class="flex items-center gap-[10px] px-[19px] py-2">
+								<div class="flex items-center gap-[24px]">
+									<button id="login" class="relative px-[2px] py-[2px] font-semibold text-[16px] text-[#00B2FF] rounded-[12px] border-none bg-gradient-to-r from-[#00B2FF] to-[#008AD4]" >
+										<span class="block bg-[#1C1B1C] rounded-[9px] px-[22px] py-[1px] ">
+											Login
+										</span>
+									</button>
+									<div class="relative mr-2" id="mobileLanguageSwitcher">
+										<a class="flex items-center gap-1 cursor-pointer" id="selectedLanguageMobile">
 											<img src="img/en.svg" alt="English Flag" class="flag">
-											<span class="font-semibold text-[24px] leading-[100%] text-white capitalize">en</span>
-											<img src="img/check.svg" alt="" class="w-6 h-6 check hidden">
 										</a>
-								    </div>
+										<div class="absolute w-[139px] hidden right-0 bg-[#222222] border border-gray-500 mt-[19px]" id="languageOptionsMobile">
+											<a href="#" data-lang="ru" class="flex items-center gap-[10px] px-[19px] py-2">
+												<img src="img/ru.svg" alt="Russian Flag" class="flag">
+												<span class="font-semibold text-[24px] leading-[100%] text-white capitalize">ru</span>
+												<img src="img/check.svg" alt="" class="w-6 h-6 check hidden">
+											</a>
+											<a href="#" data-lang="en" class="flex items-center gap-[10px] px-[19px] py-2">
+												<img src="img/en.svg" alt="English Flag" class="flag">
+												<span class="font-semibold text-[24px] leading-[100%] text-white capitalize">en</span>
+												<img src="img/check.svg" alt="" class="w-6 h-6 check hidden">
+											</a>
+										</div>
+									</div>
 								</div>
-								
 							</div>
 							<div id="mobileMenu" class="hidden px-[10px]">
 								<div class="border-2 border-[#0A0D17]/[0.05] bg-white/[0.04] backdrop-blur-[380px] py-[37px] rounded-[20px] z-20">
@@ -157,7 +167,7 @@
 							<span id="missionText2">Through thoughtful design, we turn complex ideas into simple, intuitive, and beautiful interfaces that connect people with products they love.</span>
 							<span id="missionText3">Our focus is on usability, emotion, and detail — because great design isn’t just how it looks, it’s how it feels and works.</span>
 						</p>
-						<button id="readMore" class="inline-flex items-center justify-center py-[10px] px-[25px] rounded-[2px] border-[3px] border-solid border-transparent text-white font-medium uppercase text-[16px] lg:text-[17px] leading-[100%] tracking-[0.145em] relative bg-[#0A0A0A] border-[3px] border-solid [border-image-source:linear-gradient(90deg,#00B2FF,#008AD4)] [border-image-slice:1]">
+						<button id="readMore" class="inline-flex items-center justify-center py-[10px] px-[25px] rounded-[2px] text-white font-medium uppercase text-[16px] lg:text-[17px] leading-[100%] tracking-[0.145em] relative bg-[#0A0A0A] border-[3px] border-solid [border-image-source:linear-gradient(90deg,#00B2FF,#008AD4)] [border-image-slice:1]">
 							Read More
 						</button>
 					</div>
