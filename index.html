@@ -15,15 +15,15 @@
 
 </head>
 <body>
-	<div id="content">
+	<div id="content" class=" bg-[#0D0C0E]">
 		<div class="w-full h-full bg-[#0D0C0E] bg-center bg-no-repeat bg-cover bg-[url('img/mainbg2.png')] lg:bg-[url('img/mainbg1.png')]">
 			<div class="z-40 font-montserrat flex flex-col">
 				<header id="nav" class="fixed inset-x-0 top-0  z-40">
 					<nav class="text-lg text-black container mx-auto max-w-[1440px]">
 						<div class="rounded-[16px] border border-[1px] border-[rgb(255_255_255/0.08)] shadow-[0px_8px_24px_0px_rgba(0,0,0,0.45)] backdrop-blur-[16px] items-center h-[72px] my-[14px] mx-[40px] px-6 xl:px-[40px] lg:flex hidden justify-between">
-							<div class="font-bold text-[20px] text-[#00B2FF] font-geist">
+							<a href="#content" class="font-bold text-[20px] text-[#00B2FF] font-geist">
 								HR.Tail
-							</div>
+							</a>
 							<ul class="flex gap-[40px]">
 								<li>
 									<a id="navFeatures" href="#features" class="flex items-center text-white opacity-[80%] text-[16px] font-regular py-[12px] px-[24px]">
@@ -79,9 +79,9 @@
 										</svg>
 									</button>
 								</div>
-								<div class="flex-grow font-bold text-[20px] text-[#00B2FF] font-geist ml-[24px]">
+								<a href="#content" class="flex-grow font-bold text-[20px] text-[#00B2FF] font-geist ml-[24px]">
 									HR.Tail
-								</div>
+								</a>
 								
 								<div class="relative mr-2" id="mobileLanguageSwitcher">
 								    <a class="flex items-center gap-1 cursor-pointer" id="selectedLanguageMobile">
@@ -179,20 +179,23 @@
 						</button>
 					</div>
 					
-					<div class="font-poppins max-w-[420px] lg:max-w-[708px] bg-center bg-no-repeat bg-cover px-[16px] lg:px-0" style="background-image: url(img/bgFeatures.png);">
-						<div class="flex items-center lg:gap-[38px] gap-[32px]">
-							<img src="img/SmartScheduling1.png" alt="" class="h-[155px] lg:h-[280px]">
-							<div class="text-center max-w-[303px]">
+					<div class="font-poppins max-w-[420px] lg:max-w-[708px]  px-[16px] lg:px-0" >
+						<div class="grid grid-cols-2">
+							<div class="pr-1 pb-1 lg:pb-[16px] lg:pr-[16px] flex justify-end">
+								<img src="img/SmartScheduling1.png" alt="" class="h-[155px] lg:h-[280px]">
+							</div>
+							<div class="flex flex-col items-center justify-center text-center w-full h-[155px] lg:h-[296px] bg-center bg-no-repeat bg-cover" style="background-image: url(img/bgFeaturesright.png);">
 								<p class="font-semibold text-[14px] lg:text-[20px] leading-[166%] tracking-[0.04em] bg-gradient-to-r from-[#00B2FF] to-[#008AD4] text-transparent bg-clip-text" id="shiftOptimization">Shift Optimization</p>
 								<p class="font-medium text-[12px] lg:text-[14px] leading-[166%] tracking-[0.04em] text-white pt-[10px] lg:pt-[15px]" id="shiftText">Easily organize and assign shifts for your entire team with just a few clicks.</p>
 							</div>
-						</div>
-						<div class="flex items-center lg:gap-[42px] gap-[25px] pt-[20px] pb-[9px]">
-							<div class="text-center max-w-[303px]">
+						
+							<div class="flex flex-col items-center justify-center text-center w-full h-[155px] lg:h-[280px] bg-center bg-no-repeat bg-cover" style="background-image: url(img/bgFeaturesleft.png);">
 								<p class="font-semibold text-[14px] lg:text-[20px] leading-[166%] tracking-[0.04em] bg-gradient-to-r from-[#00B2FF] to-[#008AD4] text-transparent bg-clip-text" id="openShiftManagement">Open Shift Management</p>
 								<p class="font-medium text-[12px] lg:text-[14px] leading-[166%] tracking-[0.04em] text-white pt-[10px] lg:pt-[15px]">Easily organize and assign shifts for your entire team with just a few clicks.</p>
 							</div>
-							<img src="img/SmartScheduling2.png" alt="" class="h-[155px] lg:h-[267px] lg:pr-[20px] pr-[10px]">
+							<div class="pt-1 pl-1 lg:pr-[20px] pr-[10px]">
+								<img src="img/SmartScheduling2.png" alt="" class="h-[155px] lg:h-[267px] ">
+							</div>
 						</div>
 					</div>
 					
@@ -221,7 +224,7 @@
 			</div>
 		</section>
 		<section id="payrollManagment" class="bg-[#0D0C0E]">
-			<div class="flex justify-between">
+			<div class="flex justify-between max-w-[1440px] mx-auto">
 				<div class="pt-0 lg:pt-[50px] pl-[16px] pr-[16px] lg:pl-[45px] lg:pr-0">
 					<div class="max-w-[708px] font-poppins ">
 						<p class="text-[20px] lg:text-[44px] font-bold lg:pb-[26px] pb-[10px] text-white leading-[125%] capitalize" id="payrollHeading">Effortless Payroll Management</p>
@@ -332,12 +335,12 @@
 			</div>
 		</section>
 		
-		<footer id="contacts">
-			<div>
-				<div class="bg-[#161923] py-10 md:py-[49px] px-[104px] border-t border-[#484C54] lg:block hidden">
+		<footer id="contacts" class="bg-[#161923]">
+			<div class="max-w-[1440px] mx-auto">
+				<div class="py-10 md:py-[49px] px-[104px] border-t border-[#484C54] lg:block hidden">
 					<div class="pb-[48px] flex gap-[64px]">
 						<div class="flex flex-col gap-[24px]">
-							<p class="font-bold text-white text-[20px] leading-[28px]">HRTail</p>
+							<a href="#content" class="font-bold text-white text-[20px] leading-[28px]">HRTail</a>
 							<div id="footerTextMain" class="text-[#9CA3AF] text-[16px] leading-[26px]">
 								<p>HR Tail provides reliable solutions for workforce scheduling,</p>
 								<p>attendance tracking, and payroll management. </p>
@@ -375,7 +378,7 @@
 					</div>
 				</div>
 				<div class="bg-[#161923] text-center px-[20px] block lg:hidden">
-					<p class="text-left font-geist font-bold text-[24px] leading-[100%] pt-[32px] pb-[16px] text-white">HR.Tail</p>
+					<a href="#content" class="block text-left font-geist font-bold text-[24ax] leading-[100%] pt-[32px] pb-[16px] text-white">HR.Tail</a>
 			
 					<div class="flex gap-[68px]">
 						<div class="text-left">
