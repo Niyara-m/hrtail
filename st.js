@@ -46,23 +46,18 @@ const translations = {
         footerTextMain: `<p>HR Tail provides reliable solutions for workforce scheduling,</p>
 							<p>attendance tracking, and payroll management. </p>
 							<p>Built for businesses that value efficiency, clarity, and growth. </p>`,
-
         footerAboutTitle: "About us",
         footerTrustedBy: "Trusted By",
         footerContacts: "Contacts",
-
         footerFeaturesTitle: "Features",
         footerSmartScheduling: "Smart Scheduling",
         footerTimeTracking: "Time Tracking",
         footerPayrollManagement: "Payroll Management",
-
         footerUpdatesTitle: "Real-time updates",
         footerChangelog: "Changelog",
-
         footerRights: "All rights reserved.",
         footerTerms: "Terms of Service",
         footerPrivacy: "Privacy Policy",
-
         mobilePhone: "Phone no.",
         mobileQuickLinks: "Quick links",
         mobileFeatures: "Features",
@@ -71,7 +66,6 @@ const translations = {
         mobileTerms: "Terms of Service",
         mobilePrivacy: "Privacy policy",
         mobileRights: "All rights reserved."
-        
     },
 
     ru: {
@@ -121,19 +115,15 @@ const translations = {
         footerTextMain: `<p>HR Tail предоставляет надежные решения для планирования смен,</p> 
                         <p>учета рабочего времени и управления зарплатой. </p>
                         <p>Создано для компаний, которые ценят эффективность, прозрачность и развитие.</p> `,
-
         footerAboutTitle: "О нас",
         footerTrustedBy: "Нам доверяют",
         footerContacts: "Контакты",
-
         footerFeaturesTitle: "Функции",
         footerSmartScheduling: "Умное планирование",
         footerTimeTracking: "Учёт времени",
         footerPayrollManagement: "Управление зарплатой",
-
         footerUpdatesTitle: "Обновления",
         footerChangelog: "Журнал изменений",
-
         footerRights: "Все права защищены.",
         footerTerms: "Условия обслуживания",
         footerPrivacy: "Политика конфиденциальности",
@@ -145,11 +135,8 @@ const translations = {
         mobileTerms: "Условия обслуживания",
         mobilePrivacy: "Политика конфиденциальности",
         mobileRights: "Все права защищены."
-
-        
     }
 };
-
 
 const updateContent = (selectedLang) => {
     const languageSwitcher = document.getElementById('languageSwitcher');
@@ -159,7 +146,6 @@ const updateContent = (selectedLang) => {
     const navFeatures1 = document.getElementById('navFeatures1');
     const navUpdates1 = document.getElementById('navUpdates1');
     const navAbout1 = document.getElementById('navAbout1');
-
     const mainHeading = document.getElementById('mainHeading');
     const heading = document.getElementById('heading');
     const getDemo = document.getElementById('getDemo');
@@ -204,7 +190,6 @@ const updateContent = (selectedLang) => {
     const footerTextMain = document.getElementById('footerTextMain');
     const footerAboutTitle = document.getElementById('footerAboutTitle');
     const footerTrustedBy = document.getElementById('footerTrustedBy');
-  
     const footerContacts = document.getElementById('footerContacts');
     const footerFeaturesTitle = document.getElementById('footerFeaturesTitle');
     const footerSmartScheduling = document.getElementById('footerSmartScheduling');
@@ -215,7 +200,6 @@ const updateContent = (selectedLang) => {
     const footerRights = document.getElementById('footerRights');
     const footerTerms = document.getElementById('footerTerms');
     const footerPrivacy = document.getElementById('footerPrivacy');
-
     const mobilePhone = document.getElementById('mobilePhone');
     const mobileQuickLinks = document.getElementById('mobileQuickLinks');
     const mobileFeatures = document.getElementById('mobileFeatures');
@@ -228,14 +212,12 @@ const updateContent = (selectedLang) => {
 
 
 
-
     navFeatures.textContent = translations[selectedLang].navFeatures;
     navUpdates.textContent = translations[selectedLang].navUpdates;
     navAbout.textContent = translations[selectedLang].navAbout;
     navFeatures1.textContent = translations[selectedLang].navFeatures;
     navUpdates1.textContent = translations[selectedLang].navUpdates;
     navAbout1.textContent = translations[selectedLang].navAbout;
-
     mainHeading.textContent = translations[selectedLang].mainHeading;
     heading.textContent = translations[selectedLang].heading;
     getDemo.textContent = translations[selectedLang].getDemo;
@@ -290,7 +272,6 @@ const updateContent = (selectedLang) => {
     footerRights.textContent = translations[selectedLang].footerRights;
     footerTerms.textContent = translations[selectedLang].footerTerms;
     footerPrivacy.textContent = translations[selectedLang].footerPrivacy;
-    
     mobilePhone.textContent = translations[selectedLang].mobilePhone;
     mobileQuickLinks.textContent = translations[selectedLang].mobileQuickLinks;
     mobileFeatures.textContent = translations[selectedLang].mobileFeatures;
@@ -299,15 +280,23 @@ const updateContent = (selectedLang) => {
     mobileTerms.textContent = translations[selectedLang].mobileTerms;
     mobileRights.textContent = translations[selectedLang].mobileRights;
     mobilePrivacy.textContent = translations[selectedLang].mobilePrivacy;
-
-    
 };
 
 
 
 const handleLanguageChange = (switcherId, optionsId, selectedLanguageId) => {
-    document.getElementById(selectedLanguageId).addEventListener('click', function() {
-        document.getElementById(optionsId).classList.toggle('hidden');
+    const switcher = document.getElementById(selectedLanguageId);
+    const options = document.getElementById(optionsId);
+
+    switcher.addEventListener('click', function(e) {
+        e.stopPropagation();
+        options.classList.toggle('hidden');
+
+        // Динамически ищем стрелку
+        const arrow = document.getElementById(selectedLanguageId).querySelector('img[alt="arrow"]');
+        if (arrow) {
+            arrow.style.transform = options.classList.contains('hidden') ? 'rotate(0deg)' : 'rotate(180deg)';
+        }
     });
 
     document.querySelectorAll(`#${optionsId} a`).forEach(function(option) {
@@ -331,16 +320,16 @@ const handleLanguageChange = (switcherId, optionsId, selectedLanguageId) => {
 
             updateContent(selectedLang);
 
-            // 🔥 НОВОЕ — ПЕРЕСТАВЛЯЕМ ГАЛОЧКУ К ВЫБРАННОМУ ЯЗЫКУ
+            // ПЕРЕСТАВЛЯЕМ ГАЛОЧКУ К ВЫБРАННОМУ ЯЗЫКУ
             document.querySelectorAll(`#${optionsId} a .check`).forEach(el => {
                 el.classList.add('hidden');   // убираем у всех
             });
 
             option.querySelector('.check').classList.remove('hidden'); // показываем у выбранного
+            document.getElementById(optionsId).classList.add('hidden'); // Закрываем меню сразу после выбора
 
-            const arrow = document.getElementById(selectedLanguageId).querySelector('.arrow');
-            arrow.style.transform = 'rotate(0deg)';
-
+            const arrow = document.getElementById(selectedLanguageId).querySelector('img[alt="arrow"]');
+            if (arrow) arrow.style.transform = 'rotate(0deg)';
 
             document.getElementById(optionsId).classList.add('hidden');
         });
@@ -368,6 +357,24 @@ document.getElementById('selectedLanguageMobile').innerHTML = `
 `;
 updateContent(defaultLanguage);
 
+// --- Закрытие при клике вне (Desktop + Mobile) ---
+document.addEventListener("click", (e) => {
+    const desktopBlock = document.getElementById("desktopLanguageSwitcher");
+    const desktopOptions = document.getElementById("languageOptionsDesktop");
+
+    const mobileBlock = document.getElementById("mobileLanguageSwitcher");
+    const mobileOptions = document.getElementById("languageOptionsMobile");
+
+    // Desktop
+    if (desktopBlock && desktopOptions && !desktopBlock.contains(e.target)) {
+        desktopOptions.classList.add("hidden");
+    }
+
+    // Mobile
+    if (mobileBlock && mobileOptions && !mobileBlock.contains(e.target)) {
+        mobileOptions.classList.add("hidden");
+    }
+});
 
 
 var nav = document.getElementById('nav');
@@ -387,27 +394,3 @@ function closeMobileMenu() {
     document.getElementById('openIcon').style.display = 'block';
     document.getElementById('closeIcon').style.display = 'none';
 }
-
-// Activ for nav elements
-document.addEventListener('DOMContentLoaded', function() {
-    const navLinks = document.querySelectorAll('.nav-item');
-    const navLinksMob = document.querySelectorAll('.nav-item-mob');
-    const sections = document.querySelectorAll('section'); 
-
-    function setActiveLink() {
-        let index = sections.length;
-
-        while (--index && window.scrollY + 50 < sections[index].offsetTop) {}
-
-        navLinks.forEach((link) => link.classList.remove('active'));
-        navLinks[index].classList.add('active');
-
-        navLinksMob.forEach((link) => link.classList.remove('active'));
-        navLinksMob[index].classList.add('active');
-    }
-
-    setActiveLink();
-    window.addEventListener('scroll', setActiveLink);
-});
-
-
