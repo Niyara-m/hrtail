@@ -20,6 +20,7 @@ const translations = {
         viewAll: "VIEW ALL",
         shiftOptimization: "Shift Optimization",
         shiftText: "Easily organize and assign shifts for your entire team with just a few clicks.",
+        shiftText2: "Easily organize and assign shifts for your entire team with just a few clicks.",
         openShiftManagement: "Open Shift Management",
         // Time Tracking block
         timeTrackingTitle: "Time Tracking",
@@ -65,7 +66,9 @@ const translations = {
         mobileAboutUs: "About us",
         mobileTerms: "Terms of Service",
         mobilePrivacy: "Privacy policy",
-        mobileRights: "All rights reserved."
+        mobileRights: "All rights reserved.",
+        loginText: "Login",
+        loginText2: "Login",
     },
 
     ru: {
@@ -89,6 +92,7 @@ const translations = {
         viewAll: "ПОСМОТРЕТЬ ВСЁ",
         shiftOptimization: "Оптимизация смен",
         shiftText: "Легко организуйте и назначайте смены для всей вашей команды всего за несколько кликов.",
+        shiftText2: "Легко организуйте и назначайте смены для всей вашей команды всего за несколько кликов.",
         openShiftManagement: "Открыть управление сменами",
         // Time Tracking block
         timeTrackingTitle: "Учёт времени",
@@ -134,7 +138,9 @@ const translations = {
         mobileAboutUs: "О нас",
         mobileTerms: "Условия обслуживания",
         mobilePrivacy: "Политика конфиденциальности",
-        mobileRights: "Все права защищены."
+        mobileRights: "Все права защищены.",
+        loginText: "Войти",
+        loginText2: "Войти",
     }
 };
 
@@ -164,6 +170,7 @@ const updateContent = (selectedLang) => {
     const viewAll = document.getElementById('viewAll');
     const shiftOptimization = document.getElementById('shiftOptimization');
     const shiftText = document.getElementById('shiftText');
+    const shiftText2 = document.getElementById('shiftText2');
     const openShiftManagement = document.getElementById('openShiftManagement');
     // Time Tracking block
     const timeTrackingTitle = document.getElementById('timeTrackingTitle');
@@ -208,6 +215,8 @@ const updateContent = (selectedLang) => {
     const mobileTerms = document.getElementById('mobileTerms');
     const mobileRights = document.getElementById('mobileRights');
     const mobilePrivacy = document.getElementById('mobilePrivacy');
+    const loginText = document.getElementById('loginText');
+    const loginText2 = document.getElementById('loginText2');
     
 
 
@@ -236,6 +245,7 @@ const updateContent = (selectedLang) => {
     viewAll.textContent = translations[selectedLang].viewAll;
     shiftOptimization.textContent = translations[selectedLang].shiftOptimization;
     shiftText.textContent = translations[selectedLang].shiftText;
+    shiftText2.textContent = translations[selectedLang].shiftText2;
     openShiftManagement.textContent = translations[selectedLang].openShiftManagement;
     // Time Tracking block
     timeTrackingTitle.textContent = translations[selectedLang].timeTrackingTitle;
@@ -280,6 +290,8 @@ const updateContent = (selectedLang) => {
     mobileTerms.textContent = translations[selectedLang].mobileTerms;
     mobileRights.textContent = translations[selectedLang].mobileRights;
     mobilePrivacy.textContent = translations[selectedLang].mobilePrivacy;
+    loginText.textContent = translations[selectedLang].loginText;
+    loginText2.textContent = translations[selectedLang].loginText2;
 };
 
 
