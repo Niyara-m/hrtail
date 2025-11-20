@@ -341,8 +341,8 @@ handleLanguageChange('desktopLanguageSwitcher', 'languageOptionsDesktop', 'selec
 handleLanguageChange('mobileLanguageSwitcher', 'languageOptionsMobile', 'selectedLanguageMobile');
 
 // Set default language
-const defaultLanguage = 'ru';
-const defaultFlag = 'img/ru.svg';
+const defaultLanguage = 'en';
+const defaultFlag = 'img/en.svg';
 document.getElementById('selectedLanguageDesktop').innerHTML = `
     <div class="rounded-[12px] bg-[#0A0A0A] flex items-center text-white h-full px-[12px] gap-[10px]">
         <img src="${defaultFlag}" alt="${defaultLanguage} Flag" class="flag w-6 h-6">
@@ -394,3 +394,21 @@ function closeMobileMenu() {
     document.getElementById('openIcon').style.display = 'block';
     document.getElementById('closeIcon').style.display = 'none';
 }
+
+
+// --- Закрытие при клике вне меню ---
+document.addEventListener('click', function(event) {
+    const mobileMenu = document.getElementById('mobileMenu');
+    const openIcon = document.getElementById('openIcon');
+    const closeIcon = document.getElementById('closeIcon');
+
+    // Если меню открыто и клик не по меню и не по кнопке
+    if (
+        mobileMenu.style.display === 'block' &&
+        !mobileMenu.contains(event.target) &&
+        !openIcon.contains(event.target) &&
+        !closeIcon.contains(event.target)
+    ) {
+        closeMobileMenu();
+    }
+});
