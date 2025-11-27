@@ -22,9 +22,10 @@ const applyCompanyName = () => {
 document.title = document.title.replace(/HR\.?tail|HR Tail|HRtail|Shif2/i, companyName);
 
 // Находим кнопку и вешаем обработчик
-const loginButton = document.getElementById('login');
-loginButton.addEventListener('click', () => {
-    window.open(appURL, '_blank'); // откроет в новой вкладке
+document.querySelectorAll('.loginButton').forEach(button => {
+    button.addEventListener('click', () => {
+        window.open(appURL, '_blank');
+    });
 });
 
 
