@@ -21,7 +21,7 @@
 				<header id="nav" class="fixed inset-x-0 top-0  z-40">
 					<nav class="text-lg text-black container mx-auto max-w-[1440px]">
 						<div class="rounded-[16px] border border-[1px] border-[rgb(255_255_255/0.08)] shadow-[0px_8px_24px_0px_rgba(0,0,0,0.45)] backdrop-blur-[16px] items-center h-[72px] my-[14px] mx-[40px] px-6 xl:px-[40px] lg:flex hidden justify-between">
-							<a href="#content" class="font-bold text-[20px] text-[#00B2FF] font-geist">
+							<a href="#content" class="companyName font-bold text-[20px] text-[#00B2FF] font-geist">
 								HR.Tail
 							</a>
 							<ul class="flex gap-[40px]">
@@ -84,7 +84,7 @@
 										</svg>
 									</button>
 								</div>
-								<a href="#content" class="flex-grow font-bold text-[20px] text-[#00B2FF] font-geist ml-[24px]">
+								<a href="#content" class="companyName flex-grow font-bold text-[20px] text-[#00B2FF] font-geist ml-[24px]">
 									HR.Tail
 								</a>
 								<div class="flex items-center gap-[24px]">
@@ -335,7 +335,7 @@
 		<section class="bg-[#0D0C0E]">
 			<div class="flex items-center justify-center flex-col max-w-[654px] mx-auto lg:py-[150px] py-[80px] px-[16px] lg:px-0">
 				<div class="font-bold text-white text-[20px] lg:text-[48px] leading-[48px]" id="ctaHeading">Ready To Get Started?</div>
-				<p class="text-center font-light text-white text-[16px] lg:text-[24px] leading-[166%] tracking-[0.04em] pt-[10px] lg:pt-[24px] pb-[53px]" id="ctaText">See how HR Tail can simplify scheduling, tracking, and team management — all in one place.</p>
+				<p class="text-center font-light text-white text-[16px] lg:text-[24px] leading-[166%] tracking-[0.04em] pt-[10px] lg:pt-[24px] pb-[53px]" id="ctaText">See how <span class="companyName">HR Tail</span> can simplify scheduling, tracking, and team management — all in one place.</p>
 				<div class="flex lg:flex-row flex-col gap-[16px] items-center justify-center w-full">
 					<div class="w-full lg:w-[316px] h-[49px] rounded-[12px]">
 						<input id="ctaEmail" type="email" class="w-full h-full rounded-[12px] bg-[rgba(206,201,211,0.15)] font-medium text-[14px] px-[24px] py-[16px] placeholder:text-[#aaaaaa] text-[#aaaaaa] focus:outline-none" placeholder="Your email">
@@ -350,9 +350,9 @@
 				<div class="py-10 md:py-[49px] px-[104px] border-t border-[#484C54] lg:block hidden">
 					<div class="pb-[48px] flex gap-[64px]">
 						<div class="flex flex-col gap-[24px]">
-							<a href="#content" class="font-bold text-white text-[20px] leading-[28px]">HRTail</a>
+							<a href="#content" class="companyName font-bold text-white text-[20px] leading-[28px]">HRTail</a>
 							<div id="footerTextMain" class="text-[#9CA3AF] text-[16px] leading-[26px]">
-								<p>HR Tail provides reliable solutions for workforce scheduling,</p>
+								<p><span class="companyName">HR Tail</span> provides reliable solutions for workforce scheduling,</p>
 								<p>attendance tracking, and payroll management. </p>
 								<p>Built for businesses that value efficiency, clarity, and growth. </p>
 							</div>
@@ -380,7 +380,7 @@
 						</div>
 					</div>
 					<div class="text-[#6B7280] text-[14px] leading-[20px] flex items-center justify-between pt-[24px] border-t border-[#484C54]">
-						<div>© <span id="year"></span> HRTail. <span id="footerRights">All rights reserved.</span></div>
+						<div>© <span id="year"></span> <span class="companyName">HRTail</span>. <span id="footerRights">All rights reserved.</span></div>
 						<div class="flex gap-[24px]">
 							<p id="footerTerms">Terms of Service</p>
 							<p id="footerPrivacy">Privacy Policy</p>
@@ -420,7 +420,7 @@
 								<p id="mobilePrivacy">Privacy Policy</p>
 						</div>
 						<div class="text-left text-[#6B7280] text-[14px] leading-[20px] pt-[24px] border-t border-[#484C54]">
-							<div>© <span id="year"></span> <span id="mobileRights">HRTail. All rights reserved.</span></div>
+							<div>© <span id="year"></span> <span id="mobileRights"><span class="companyName">HRTail</span>. All rights reserved.</span></div>
 						</div>
 					</div>
 				</div>
@@ -447,6 +447,6 @@
 	
 	<script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
 	<!-- <script  src="./node_modules/@splidejs/splide/dist/js/splide.min.js"></script> -->
-	<script src="st.js"></script>
+	<script src="st.js" defer></script>
 </body>
 </html>

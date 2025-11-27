@@ -1,3 +1,22 @@
+// Получаем домен сайта
+const domain = window.location.hostname.replace('www.', '');
+
+let companyName = 'Shif2'; // по умолчанию
+
+if (domain === 'shif2.com') {
+    companyName = 'Shif2';
+} else if (domain === 'hrtail.com') {
+    companyName = 'HRtail';
+}
+
+const applyCompanyName = () => {
+    document.querySelectorAll('.companyName').forEach(el => {
+        el.textContent = companyName;
+    });
+};
+
+document.title = document.title.replace(/HR\.?tail|HR Tail|HRtail|Shif2/i, companyName);
+
 const translations = {
     en: {
         navFeatures: "Features",
@@ -40,11 +59,11 @@ const translations = {
         payrollPaymentPaid: "Paid",
         // Ready To Get Started?
         ctaHeading: "Ready To Get Started?",
-        ctaText: "See how HR Tail can simplify scheduling, tracking, and team management — all in one place.",
+        ctaText: `See how <span class="companyName">HR Tail</span> can simplify scheduling, tracking, and team management — all in one place.`,
         ctaEmailPlaceholder: "Your email",
         ctaButton: "Get Demo",
         // footer
-        footerTextMain: `<p>HR Tail provides reliable solutions for workforce scheduling,</p>
+        footerTextMain: `<p><span class="companyName">HR Tail</span> provides reliable solutions for workforce scheduling,</p>
 							<p>attendance tracking, and payroll management. </p>
 							<p>Built for businesses that value efficiency, clarity, and growth. </p>`,
         footerAboutTitle: "About us",
@@ -112,11 +131,11 @@ const translations = {
         payrollPaymentPaid: "Оплачено",
         // Ready To Get Started?
         ctaHeading: "Готовы начать?",
-        ctaText: "Узнайте, как HR Tail может упростить планирование, учёт и управление командой — всё в одном месте.",
+        ctaText: `Узнайте, как <span class="companyName">HR Tail</span> может упростить планирование, учёт и управление командой — всё в одном месте.`,
         ctaEmailPlaceholder: "Ваш email",
         ctaButton: "Получить демо",
         // footer
-        footerTextMain: `<p>HR Tail предоставляет надежные решения для планирования смен,</p> 
+        footerTextMain: `<p><span class="companyName">HR Tail</span> предоставляет надежные решения для планирования смен,</p> 
                         <p>учета рабочего времени и управления зарплатой. </p>
                         <p>Создано для компаний, которые ценят эффективность, прозрачность и развитие.</p> `,
         footerAboutTitle: "О нас",
@@ -265,11 +284,13 @@ const updateContent = (selectedLang) => {
     payrollPaymentPaid.textContent = translations[selectedLang].payrollPaymentPaid;
     // Ready To Get Started?
     ctaHeading.textContent = translations[selectedLang].ctaHeading;
-    ctaText.textContent = translations[selectedLang].ctaText;
+    ctaText.innerHTML = translations[selectedLang].ctaText;
+    applyCompanyName();
     ctaEmail.placeholder = translations[selectedLang].ctaEmailPlaceholder;
     ctaButton.textContent = translations[selectedLang].ctaButton;
     // footer
     footerTextMain.innerHTML = translations[selectedLang].footerTextMain;
+    applyCompanyName();
     footerAboutTitle.textContent = translations[selectedLang].footerAboutTitle;
     footerTrustedBy.textContent = translations[selectedLang].footerTrustedBy;
     footerContacts.textContent = translations[selectedLang].footerContacts;
