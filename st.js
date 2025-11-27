@@ -1,12 +1,16 @@
 // Получаем домен сайта
 const domain = window.location.hostname.replace('www.', '');
 
-let companyName = 'Shif2'; // по умолчанию
+// по умолчанию
+let companyName = 'Shif2'; 
+let appURL = 'https://app.shif2.com'; // кнопка войти
 
 if (domain === 'shif2.com') {
     companyName = 'Shif2';
+    appURL = 'https://app.shif2.com';
 } else if (domain === 'hrtail.com') {
     companyName = 'HRtail';
+    appURL = 'https://app.hrtail.com';
 }
 
 const applyCompanyName = () => {
@@ -16,6 +20,13 @@ const applyCompanyName = () => {
 };
 
 document.title = document.title.replace(/HR\.?tail|HR Tail|HRtail|Shif2/i, companyName);
+
+// Находим кнопку и вешаем обработчик
+const loginButton = document.getElementById('login');
+loginButton.addEventListener('click', () => {
+    window.open(appURL, '_blank'); // откроет в новой вкладке
+});
+
 
 const translations = {
     en: {
