@@ -73,7 +73,7 @@ const translations = {
 
     ru: {
         navFeatures: "Функции",
-        navUpdates: "Обновления",
+        navUpdates: "Учёт времени",
         navAbout: "О нас",
         mainHeading: "Мощная платформа для организации вашей команды",
         heading: "Дайте вашей HR-команде возможность эффективно управлять посещаемостью, графиками смен и аналитикой продуктивности — всё в одной интуитивно понятной платформе.",
@@ -352,9 +352,19 @@ const handleLanguageChange = (switcherId, optionsId, selectedLanguageId) => {
 handleLanguageChange('desktopLanguageSwitcher', 'languageOptionsDesktop', 'selectedLanguageDesktop');
 handleLanguageChange('mobileLanguageSwitcher', 'languageOptionsMobile', 'selectedLanguageMobile');
 
+// Определяем язык браузера
+let browserLang = navigator.language || navigator.userLanguage;
+browserLang = browserLang.toLowerCase();
+
 // Set default language
-const defaultLanguage = 'en';
-const defaultFlag = 'img/en.svg';
+let defaultLanguage = 'en';
+let defaultFlag = 'img/en.svg';
+
+if (browserLang.startsWith('ru')) {
+    defaultLanguage = 'ru';
+    defaultFlag = 'img/ru.svg';
+}
+
 document.getElementById('selectedLanguageDesktop').innerHTML = `
     <div class="rounded-[12px] bg-[#0A0A0A] flex items-center text-white h-full px-[12px] gap-[10px]">
         <img src="${defaultFlag}" alt="${defaultLanguage} Flag" class="flag w-6 h-6">
